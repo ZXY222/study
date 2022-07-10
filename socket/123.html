@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let a = {};
+    // console.log(JSON.stringify(a) === '{}');
+    // console.log(Object.keys(a).length === 0);
+    // let arr = [
+    //     {
+    //         a: 1,
+    //         b: 2,
+    //     },
+    //     {
+    //         a: 3,
+    //         b: 4
+    //     }
+    // ];
+    // console.log(arr);
+    // console.log(...arr);
+    // let a = arr.map((item)=>{
+    //     return {
+    //         ...item,
+    //         c: item.a + item.b
+    //     }
+    // })
+    // console.log(a);
+    // let obj = {a:1,b:2,c:3,d:4};
+    // let eat = {...obj, e:5};
+    // console.log(eat);
+    // console.log([1, [1, 2, 3], 4]);
+    // console.log(...[1, [1, 2, 3], 4]);
+    // function add(x, y) {
+    //     return x + y;
+    // }
+    // const numbers = [1, 2];
+    // let a = add(...numbers);
+    // console.log(a);
+    // const arr1 = [1, 2];
+    // const arr2 = [...arr1];
+    // console.log(arr2);
+    // arguments对象
+    // function foo() {
+    //     const args = [...arguments];
+    //     console.log(args);
+    // }
+    // foo()
+    // const stu = {
+    //     name: 'Bob',
+    //     age: 24
+    // }
+    // const { name, age } = stu
+    // console.log(name);
+    // console.log(age);
+    // let fn = function (a,b){
+    //     return `${a} + ${b} = ${a+b}`
+    // }
+    // console.log(fn(1, 2));
+    // let a = [5,3,6,9,6,6,6,88];
+    // function sum(array,item){
+    //     return array.reduce(function (pre,value){
+    //        pre += (item === value ? 1 : 0);
+    //         return pre
+    //     },0)
+    // }
+    // function getMax(array){
+    //     return array.reduce(function (pre,value){
+    //         return pre > value ? pre : value;
+    //     })
+    // }
+    //
+    // console.log(getMax(a));
+    // console.log(sum(a, 6));
+    // var tmp = new Date();
+    //
+    // function fn(){
+    //     var tmp
+    //     console.log(tmp);
+    //     if(false){
+    //         tmp = 'hello world';
+    //     }
+    // }
+    //
+    // fn();  // undefined
+    // let a = [1,2,3,4]
+    // Array.prototype.myForeach = function (fn){
+    //     for (let i = 0; i < this.length; i++){
+    //         fn(this[i],i,this)
+    //     }
+    // }
+    // a.myForeach(function (value,index,data){
+    //     console.log(value,index,data)
+    // })
+    // let result = a.filter(function (value,index,array){
+    //     if (value > 1){
+    //         return true
+    //     }
+    // })
+    // console.log(result);
+    // let obj = {
+    //     a: 1
+    // }
+    // function say(...item) {
+    //     console.log(item);
+    // }
+    //
+    // let result = say.bind(obj, 1,2,3)
+    // result()
+    let a = [1,2,2,3,4,88,2,5,2];
+    // let result = a.reduce(function (pre,value,array){
+    //     return pre > value ? pre : value;
+    // });
+    // console.log(result);
+    function sum(array,count){
+        return array.reduce(function (pre,value){
+            pre+=count === value ? 1 : 0;
+            return pre
+        },0)
+    }
+    console.log(`2出现的次数是:${sum(a, 2)}次`);
+</script>
+</body>
+</html>
